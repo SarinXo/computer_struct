@@ -1,6 +1,6 @@
 package computer_components.basic.enums;
 
-public enum MemoryType {
+public enum RamType {
     DDR2,
     DDR3,
     DDR3L,

@@ -1,12 +1,18 @@
 package computer_components.basic.Power;
 
-import computer_components.basic.enums.ConnectionJack;
-import computer_components.basic.enums.PowerFormFactor;
+import computer_components.basic.ModelInformation;
 
-import java.util.Map;
+public abstract class Power extends ModelInformation {
+    protected int   powerInWatt;
 
-public abstract class Power {
-    protected int                           powerInWatt;
-    protected PowerFormFactor               powerFormFactor;
-    protected Map<ConnectionJack, Integer>  jacks;
+    public Power(String serialNumber, String manufacturer,
+                 int powerInWatt) {
+        super(serialNumber, manufacturer);
+        this.powerInWatt = powerInWatt;
+
+    }
+
+    public int powerInWatt() {
+        return powerInWatt;
+    }
 }

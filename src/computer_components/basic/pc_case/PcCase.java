@@ -1,13 +1,10 @@
 package computer_components.basic.pc_case;
 
-import computer_components.basic.enums.MotherboardFormFactor;
-import computer_components.basic.enums.PowerFormFactor;
+import computer_components.basic.ModelInformation;
 
-public abstract class PcCase {
-    protected MotherboardFormFactor motherboardFormFactor;
-    protected PowerFormFactor       powerFormFactor;
-    protected List<Slot>
-    protected int maxVideoCardLength;
-    protected int maxCoolerHeight;
+public abstract class PcCase extends ModelInformation {
+    public PcCase(String serialNumber, String manufacturer) {
+        super(serialNumber, manufacturer);
+    }
 
 }
